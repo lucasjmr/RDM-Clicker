@@ -1,8 +1,6 @@
 ﻿#Requires AutoHotkey v2.0
 #SingleInstance Force
 
-SetWorkingDir(A_ScriptDir) ; set working dir of RDM-clicker.ahk -> can use absolute path to get assets
-TraySetIcon("assets/awesome_icone.ico")
 A_TrayMenu.Delete() ; Deletes standard tray elements
 A_TrayMenu.Add("Show Gui", ShowGui)
 A_TrayMenu.Add("Exit App", KillApp)
