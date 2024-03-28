@@ -1,4 +1,4 @@
-﻿#Requires AutoHotkey v2.0
+#Requires AutoHotkey v2.0
 #SingleInstance Force
 
 A_TrayMenu.Delete() ; Deletes standard tray elements
@@ -9,7 +9,7 @@ A_IconTip := "RDM Clicker - by JM"
 ; Create the GUI
 myGui := Gui()
 myGui.OnEvent("Close", HideGui)
-myGui.Opt("-MinimizeBox -MaximizeBox +AlwaysOnTop -DPIScale")
+myGui.Opt("-MinimizeBox -MaximizeBox +AlwaysOnTop")
 myGui.SetFont("s11", "Calibri")
 Tab := myGui.Add("Tab3", "x0 y0 w512 h290", ["Left Click", "Right Click"])
 
@@ -55,20 +55,20 @@ KillApp(*)
 	ExitApp
 }
 
-F21::
+*F21::
 {
 	If LeftEnabled.Value
 	{
 		LeftMinMs := 1000/LeftMin.Value
 		LeftMaxMs := 1000/LeftMax.Value
 		LLUD := LeftUpDown.Value
-		LCheck := LeftMaxMs <= LLUD
-		while GetKeyState("F21")
+		LCheck := LeftMaxMs >= LLUD
+		while GetKeyState("F21", "P")
 		{
 			Click "Left Down"
 			Sleep LLUD
 			CLick "Left Up"
-			If !LCheck
+			If LCheck
 			{
 				Sleep (Random(LeftMinMs,LeftMaxMs)-LLUD)
 			}
@@ -76,20 +76,20 @@ F21::
 	}
 }
 
-F22::
+*F22::
 {
 	If RightEnabled.Value
 	{
 		RightMinMs := 1000/RightMin.Value
 		RightMaxMs := 1000/RightMax.Value
 		RLUD := RightUpDown.Value
-		RCheck := RightMaxMs <= RLUD
-		while GetKeyState("F22")
+		RCheck := RightMaxMs >= RLUD
+		while GetKeyState("F22", "P")
 		{
 			Click "Right Down"
 			Sleep RLUD
 			CLick "Right Up"
-			If !RCheck
+			If RCheck
 			{
 				Sleep (Random(RightMinMs,RightMaxMs)-RLUD)
 			}
