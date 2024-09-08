@@ -1,5 +1,6 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
+SetBatchLines -1
 
 A_TrayMenu.Delete() ; Deletes standard tray elements
 A_TrayMenu.Add("Show Gui", ShowGui)
