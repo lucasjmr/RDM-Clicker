@@ -1,4 +1,7 @@
 # RDM-Clicker
+
+![alt text](https://github.com/lucasjmr/RDM-Clicker/blob/main/RDM-clicker.png?raw=true)
+
 Simple randomized autoclicker with a nice GUI. This isn't a regular toggle autoclicker, it clicks until you stop holding button. 
 
 Bind the mouse keys to F21 for left click and F22 for right click (razer synapse, logitech ghub...)
