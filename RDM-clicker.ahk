@@ -22,7 +22,7 @@ myGui.Add("Text", "x190 y145 w120 h23 +0x200 +Center", "Min.")
 myGui.Add("Text", "x190 y238 w120 h23 +0x200 +Center", "Max.")
 LeftUpDown := myGui.Add("Edit", "x440 y72 w35 h21 +Number Limit3 -WantReturn", "30") ;Tab1 Up-Down delay field
 myGui.Add("Text", "x338 y71 w98 h23 +0x200", "Up-Down Delay")
-LeftEnabled := myGui.Add("CheckBox", "x42 y71 w72 h23", " Enabled") ;LeftClick Enabled checkbox
+LeftEnabled := myGui.Add("CheckBox", "x42 y71 w72 h23 Checked", " Enabled") ;LeftClick Enabled checkbox
 myGui.Add("Text", "x180 y72 w98 h23 +0x200", "Hotkey is F21")
 
 Tab.UseTab(2)
@@ -34,7 +34,7 @@ myGui.Add("Text", "x190 y145 w120 h23 +0x200 +Center", "Min.")
 myGui.Add("Text", "x190 y238 w120 h23 +0x200 +Center", "Max.")
 RightUpDown := myGui.Add("Edit", "x440 y72 w35 h21 +Number Limit3 -WantReturn", "30") ;Tab2 Up-Down delay field
 myGui.Add("Text", "x338 y71 w98 h23 +0x200", "Up-Down Delay")
-RightEnabled := myGui.Add("CheckBox", "x42 y71 w72 h23", " Enabled") ;RightClick Enabled checkbox
+RightEnabled := myGui.Add("CheckBox", "x42 y71 w72 h23 Checked", " Enabled") ;RightClick Enabled checkbox
 myGui.Add("Text", "x180 y72 w98 h23 +0x200", "Hotkey is F22")
 
 myGui.Title := "RDM Clicker"
