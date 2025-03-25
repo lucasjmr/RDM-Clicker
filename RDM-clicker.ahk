@@ -23,7 +23,7 @@ myGui.Add("Text", "x190 y238 w120 h23 +0x200 +Center", "Max.")
 LeftUpDown := myGui.Add("Edit", "x440 y72 w35 h21 +Number Limit3 -WantReturn", "30") ;Tab1 Up-Down delay field
 myGui.Add("Text", "x338 y71 w98 h23 +0x200", "Up-Down Delay")
 LeftEnabled := myGui.Add("CheckBox", "x42 y71 w72 h23 Checked", " Enabled") ;LeftClick Enabled checkbox
-myGui.Add("Text", "x180 y72 w98 h23 +0x200", "Hotkey is F21")
+myGui.Add("Text", "x180 y72 w98 h23 +0x200", "Mouse button 5")
 
 Tab.UseTab(2)
 myGui.Add("GroupBox", "x10 y40 w480 h80", "Options")
@@ -35,7 +35,7 @@ myGui.Add("Text", "x190 y238 w120 h23 +0x200 +Center", "Max.")
 RightUpDown := myGui.Add("Edit", "x440 y72 w35 h21 +Number Limit3 -WantReturn", "30") ;Tab2 Up-Down delay field
 myGui.Add("Text", "x338 y71 w98 h23 +0x200", "Up-Down Delay")
 RightEnabled := myGui.Add("CheckBox", "x42 y71 w72 h23 Checked", " Enabled") ;RightClick Enabled checkbox
-myGui.Add("Text", "x180 y72 w98 h23 +0x200", "Hotkey is F22")
+myGui.Add("Text", "x180 y72 w98 h23 +0x200", "Mouse button 4")
 
 myGui.Title := "RDM Clicker"
 myGui.Show("w500 h280")
@@ -55,7 +55,7 @@ KillApp(*)
 	ExitApp
 }
 
-*F21::
+*XButton2::
 {
 	If LeftEnabled.Value
 	{
@@ -63,7 +63,7 @@ KillApp(*)
 		LeftMaxMs := 1000/LeftMax.Value
 		LLUD := LeftUpDown.Value
 		LCheck := LeftMaxMs >= LLUD
-		while GetKeyState("F21", "P")
+		while GetKeyState("XButton2", "P")
 		{
 			Click "Left Down"
 			Sleep LLUD
@@ -76,7 +76,7 @@ KillApp(*)
 	}
 }
 
-*F22::
+*XButton1::
 {
 	If RightEnabled.Value
 	{
@@ -84,7 +84,7 @@ KillApp(*)
 		RightMaxMs := 1000/RightMax.Value
 		RLUD := RightUpDown.Value
 		RCheck := RightMaxMs >= RLUD
-		while GetKeyState("F22", "P")
+		while GetKeyState("XButton1", "P")
 		{
 			Click "Right Down"
 			Sleep RLUD
